@@ -1,13 +1,13 @@
 package oop.inheritence;
 
-public class Dog extends Animal{        //extends -
+public class Dog extends Animal {        //extends -
 
-    public void bark(){
+    public void bark() {
         System.out.println("Ham ham");
     }
 
     @Override
-    public void eat(){
+    public void eat() {
         System.out.println("The dog is eating");
     }
 

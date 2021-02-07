@@ -1,6 +1,6 @@
 package oop.inheritence;
 
-public class Triangle extends GeometricFigure {    /// Clasa copil a Geometric figure
+public class Triangle extends GeometricFigure {    /// Clasa copil a GeometricFigure
     private double side1;
     private double side2;
     private double side3;
@@ -18,8 +18,7 @@ public class Triangle extends GeometricFigure {    /// Clasa copil a Geometric f
 
     @Override
     public double calculateArea() {
-        double p;
-        p = side1 + side2 + side3;
-        return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+        double semiPerimeter = (side1 + side2 + side3)/2;
+        return Math.sqrt(semiPerimeter * (semiPerimeter - side1) * (semiPerimeter - side2) * (semiPerimeter - side3));
     }
 }

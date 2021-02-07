@@ -19,14 +19,11 @@ public class Main {
         System.out.println("Perimetrul cerc: " + circle.calculatePerimeter());
         System.out.println("Perimetrul triunghi : " + triangle.calculatePerimeter());
         System.out.println("Perimetrul dreptunghi: " + rectangle.calculatePerimeter());
-
+        System.out.println("---------------------------");
         System.out.println("Aria patrat: " + square.calculateArea());
         System.out.println("Aria cerc: " + circle.calculateArea());
         System.out.println("Aria triunghi : " + triangle.calculateArea());
         System.out.println("Aria dreptunghi: " + rectangle.calculateArea());
-
-
-
     }
 
     private static void playWithPolymorphism() {
@@ -61,7 +58,6 @@ public class Main {
         arrayOfAnimals[1]= dog;
         arrayOfAnimals[2] = cat;
 
-
         //este varianta de for clasic
         for (int i = 0; i< arrayOfAnimals.length;i++){
             arrayOfAnimals[i].makeSound();
@@ -69,7 +65,7 @@ public class Main {
         System.out.println("------------------");
 
 
-        // este varianta  de for enhanced de iterare (parcurgere) a elementelor din arrayu
+        // este varianta  de for enhanced de iterare (parcurgere) a elementelor din array
         for (Animal element:arrayOfAnimals){
             element.makeSound();            //runtime polymorphism OVER RIDING
         }
