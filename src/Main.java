@@ -6,7 +6,8 @@ public class Main {
         //playWithAbstraction();
         //playWithInheritance();
         //playWithPolymorphism();
-        playWithGeometricFigures();
+        //playWithGeometricFigures();
+        //playWithExtendedBankAccount();
     }
 
     private static void playWithGeometricFigures(){
@@ -37,8 +38,6 @@ public class Main {
         cat.makeSound();
         otherCat.purr();
         otherCat.purr("Angel");  // compile time polymorphism (static) Method OVERLOADING
-
-
     }
 
     public static void playWithInheritance() {
@@ -80,5 +79,12 @@ public class Main {
         System.out.println(cat);
         cat.feed();
         System.out.println(cat);
+    }
+
+    public static void playWithExtendedBankAccount(){
+        ExtendedBankAccount account1 = new ExtendedBankAccount(100, 0.12f);
+        System.out.println(account1.getBalance());
+        account1.addMonthlyInterest();
+        System.out.println(account1.getBalance());
     }
 }
