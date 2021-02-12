@@ -8,13 +8,14 @@ public class Main {
         //playWithPolymorphism();
         //playWithGeometricFigures();
         //playWithExtendedBankAccount();
+        playWithGenerickPackage();
     }
 
-    private static void playWithGeometricFigures(){
+    private static void playWithGeometricFigures() {
         GeometricFigure circle = new Circle(3); // polimorfism de tip Run-time
         GeometricFigure square = new Square(5);  // polimorfism de tip Run-time
-        GeometricFigure triangle = new Triangle(2,3,4);
-        GeometricFigure rectangle = new Rectangle(2,3);
+        GeometricFigure triangle = new Triangle(2, 3, 4);
+        GeometricFigure rectangle = new Rectangle(2, 3);
 
         System.out.println("Perimetrul patrat: " + square.calculatePerimeter());
         System.out.println("Perimetrul cerc: " + circle.calculatePerimeter());
@@ -54,18 +55,18 @@ public class Main {
 
         Animal[] arrayOfAnimals = new Animal[3];
         arrayOfAnimals[0] = animal;
-        arrayOfAnimals[1]= dog;
+        arrayOfAnimals[1] = dog;
         arrayOfAnimals[2] = cat;
 
         //este varianta de for clasic
-        for (int i = 0; i< arrayOfAnimals.length;i++){
+        for (int i = 0; i < arrayOfAnimals.length; i++) {
             arrayOfAnimals[i].makeSound();
         }
         System.out.println("------------------");
 
 
         // este varianta  de for enhanced de iterare (parcurgere) a elementelor din array
-        for (Animal element:arrayOfAnimals){
+        for (Animal element : arrayOfAnimals) {
             element.makeSound();            //runtime polymorphism OVER RIDING
         }
 
@@ -81,10 +82,18 @@ public class Main {
         System.out.println(cat);
     }
 
-    public static void playWithExtendedBankAccount(){
+    public static void playWithExtendedBankAccount() {
         ExtendedBankAccount account1 = new ExtendedBankAccount(100, 0.12f);
         System.out.println(account1.getBalance());
         account1.addMonthlyInterest();
         System.out.println(account1.getBalance());
+    }
+
+    public static void playWithGenerickPackage() {
+        GenericPackage package1 = new GenericPackage("147956478584", 5.6, "Laptop");
+        package1.setNewCourierName("Pierre-Carry");
+        //System.out.println(package1.getCourierName());
+        System.out.println(package1.computeDetails());
+        System.out.println("The code is: " + package1.checkID());
     }
 }
