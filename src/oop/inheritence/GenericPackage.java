@@ -93,7 +93,6 @@ public class GenericPackage {
         return true;
     }
 
-
     public String computeDetails() {
         return "The package{ '" +  this.packageName + "' uniqueID='" + uniqueID +
                 "' weight=" + weight +

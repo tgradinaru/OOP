@@ -1,5 +1,8 @@
 import oop.abstraction.Cat;
 import oop.inheritence.*;
+import sun.net.www.content.text.Generic;
+
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +11,45 @@ public class Main {
         //playWithPolymorphism();
         //playWithGeometricFigures();
         //playWithExtendedBankAccount();
-        playWithGenerickPackage();
+        //playWithGenericPackage();
+        //playWithAbstractClass();
+        ///////////////////////////
+        playWithGenericStudent();
+
+    }
+
+    private static void playWithGenericStudent() {
+        GenericStudent[] arrayOfStudents = new GenericStudent[10];
+        GenericStudent s01 = new GenericStudent("Ion", "vasi", 19, "CJ", 102);
+        GenericStudent s02 = new GenericStudent("Vasi", "ion", 20, "CR", 103);
+        GenericStudent s03 = new GenericStudent("John", "Smith", 23, "CA", 104);
+        GenericStudent s04 = new GenericStudent("Sam", "Fox", 24, "TM", 110);
+        GenericStudent s05 = new GenericStudent("Cat", "New", 39, "LD", 956);
+        GenericStudent s06 = new GenericStudent("Ion", "joe", 45, "BU", 696);
+        GenericStudent s07 = new GenericStudent("Ane", "Pop", 43, "BV", 845);
+        GenericStudent s08 = new GenericStudent("Ion", "Cuc", 37, "IS", 444);
+        GenericStudent s09 = new GenericStudent("Pop", "ion", 29, "GL", 468);
+        GenericStudent s10 = new GenericStudent("John", "Doe", 33, "CT", 336);
+        arrayOfStudents[0] = s01;
+        arrayOfStudents[1] = s02;
+        arrayOfStudents[2] = s03;
+        arrayOfStudents[3] = s04;
+        arrayOfStudents[4] = s05;
+        arrayOfStudents[5] = s06;
+        arrayOfStudents[6] = s07;
+        arrayOfStudents[7] = s08;
+        arrayOfStudents[8] = s09;
+        arrayOfStudents[9] = s10;
+        for (GenericStudent element:arrayOfStudents) {
+           if (element.getName().equalsIgnoreCase("ion")){
+               System.out.println(element.toString());
+            }
+        }
+    }
+
+    private static void playWithAbstractClass() {
+        AbstractChild abstractChild = new AbstractChild();
+        abstractChild.executionTime();
     }
 
     private static void playWithGeometricFigures() {
@@ -89,8 +130,8 @@ public class Main {
         System.out.println(account1.getBalance());
     }
 
-    public static void playWithGenerickPackage() {
-        GenericPackage package1 = new GenericPackage("147956478584", 5.6, "Laptop");
+    public static void playWithGenericPackage() {
+        GenericPackage package1 = new GenericPackage("213142341425", 5.6, "Laptop");
         package1.setNewCourierName("Pierre-Carry");
         //System.out.println(package1.getCourierName());
         System.out.println(package1.computeDetails());

@@ -7,7 +7,7 @@ public class ExtendedBankAccount extends BankAccount {
         this.balance += this.balance * annualInterestRate / 12;
     }
 
-    public ExtendedBankAccount(float balance, float annualInterestRate) {
+    public ExtendedBankAccount(float balance, float annualInterestRate) { //constructor
         this.balance = balance;
         this.annualInterestRate = annualInterestRate;
     }
