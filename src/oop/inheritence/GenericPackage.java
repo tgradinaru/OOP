@@ -1,10 +1,10 @@
 package oop.inheritence;
 
 public class GenericPackage {
-    String uniqueID;    // cod unic pachet colet format din cifre
-    double weight;      // greutate colt
-    String packageName; // nume pachet
-    String courierName = "DevCarry"; // numele firmei de curierat
+    private String uniqueID;    // cod unic pachet colet format din cifre
+    private double weight;      // greutate colt
+    private String packageName; // nume pachet
+    private String courierName = "DevCarry"; // numele firmei de curierat
 
     public GenericPackage(String uniqueID, double weight, String packageName) { //Constructor
         this.uniqueID = uniqueID;

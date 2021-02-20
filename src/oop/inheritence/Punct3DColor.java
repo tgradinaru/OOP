@@ -1,7 +1,7 @@
 package oop.inheritence;
 
 public class Punct3DColor extends Punct3D {
-    String color;
+    private String color;
 
     public Punct3DColor(int x, int y, int z, String color) { //constructor
         super(x, y, z);

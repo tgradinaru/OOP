@@ -1,6 +1,6 @@
 package oop.inheritence;
 
-public class AbstractExecution {
+public abstract class AbstractExecution {
     public void calculus(){
     }
 
