@@ -13,6 +13,7 @@ public class Main {
 
         countries.put("Romania", "Iasi");
         System.out.println(countries);
+
         for(Map.Entry<String, String> entry: countries.entrySet()){
             System.out.printf("%s : %s\n", entry.getKey(), entry.getValue());
         }

@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
     downloading a list of servers, that names start from http.
     downloading a list of servers, that names start from https. */
 
+
 public class LazyServers {
 
     private static LazyServers instance;
