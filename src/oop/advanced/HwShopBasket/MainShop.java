@@ -35,11 +35,11 @@ public class MainShop {
         basket.addProduct(product4,4);
         basket.addProduct(product4,4);
 
-
-        //basket.removeProduct(product1,3);
+        basket.removeProduct(product2,3);
         //basket.removeProduct(product5,10);
 
         System.out.println(basket);
+        //System.out.println(basket.calculateTotal());
 
         /**/
         //addProductsInList();

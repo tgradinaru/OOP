@@ -6,8 +6,6 @@ public class Employee implements Measurable {
     String name;
     double salary;
 
-
-
     public double getSalary() {
         return salary;
     }

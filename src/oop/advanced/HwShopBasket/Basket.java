@@ -8,45 +8,54 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class Basket {
-    private Map<GenericProduct, AtomicInteger> basketList = new HashMap<>();
+    private HashMap<GenericProduct, AtomicInteger> products;
+
+    //private Map<GenericProduct, AtomicInteger> products = new HashMap<>();
 
     public void addProduct(GenericProduct product, Integer quantity) {
 
-        if (basketList.containsKey(product)) {
-            basketList.get(product).getAndAdd(quantity);
+        if (products.containsKey(product)) {
+            products.get(product).getAndAdd(quantity);
         } else if (product.getAvailability()) {
-            basketList.put(product, new AtomicInteger(quantity));
+            products.put(product, new AtomicInteger(quantity));
         }
     }
 
     public void removeProduct(GenericProduct product, Integer quantity) {
-        if (!basketList.containsKey(product)) {
+        if (!products.containsKey(product)) {
             System.out.println("Produsul " + product + "nu e in cos!");
         }
-        if (basketList.containsKey(product) && basketList.get(product).get() <= quantity) {
-            basketList.remove(product);
+        if (products.containsKey(product) && products.get(product).get() <= quantity) {
+            products.remove(product);
         }
-        if (basketList.containsKey(product)) {
-            basketList.get(product).getAndAdd(-quantity);
+        if (products.containsKey(product)) {
+            products.get(product).getAndAdd(-quantity);
         }
     }
 
-/*    public void addListToBasket(Map<GenericProduct, Integer> basketList){
-        this.basketList = basketList.stream()
-                .filter(genericProduct -> genericProduct.getAvailability())
-                .collect(Collectors.toList());
-    }*/
 
+    public HashMap<GenericProduct,AtomicInteger> getProducts() {
+        return products;
+    }
 
-    public List<Product> getBasketList() {
-        return new ArrayList<>(basketList.keySet());
+    public double calculateTotal(){
+        return this.products.entrySet()
+                .stream()
+                .mapToDouble(product -> product.getKey().getPrice() * product.getValue().doubleValue())
+                .sum();
     }
 
 
     @Override
     public String toString() {
         return "Basket{" +
-                "basketList=" + basketList +
+                "basketList=" + products +
                 '}';
     }
+
+    /*    public void addListToBasket(Map<GenericProduct, Integer> basketList){
+        this.basketList = basketList.stream()
+                .filter(genericProduct -> genericProduct.getAvailability())
+                .collect(Collectors.toList());
+    }*/
 }
