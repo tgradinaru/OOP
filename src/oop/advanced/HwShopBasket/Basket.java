@@ -37,15 +37,9 @@ public class Basket {
                 .collect(Collectors.toList());
     }*/
 
-    private Map<GenericProduct, AtomicInteger> retreiveProduct(GenericProduct product, AtomicInteger quantity) {
-        return this.basketList;
-    }
 
-
-
-    public Map<GenericProduct, AtomicInteger> getBasketList() {
-        Map<GenericProduct, AtomicInteger> returnedList = basketList;
-        return returnedList;
+    public List<Product> getBasketList() {
+        return new ArrayList<>(basketList.keySet());
     }
 
 

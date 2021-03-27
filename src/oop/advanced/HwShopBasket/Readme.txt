@@ -19,7 +19,6 @@ should be done through Basket methods
    Basket from exercise 10 so that it also tracks quantity of a particular product
    and allows for increment or decrement by a specified amount
 
-13.Create
-       OrderService class that accepts instance of the Basket class from exercise 12 and
+13.Create OrderService class that accepts instance of the Basket class from exercise 12 and
        returns total price for all the items in the Basket that are available . Remember about
        quantity you will have to improve Basket class again . Use streams

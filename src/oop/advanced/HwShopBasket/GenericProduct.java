@@ -5,24 +5,28 @@ import java.time.LocalDate;
 public class GenericProduct implements Product{
     private String supplier;
     private String productName;
-    private double supplingPrice;
+    private double supplyingPrice;
     private LocalDate availableDate;
 
-    public double getSupplingPrice() {
-        return supplingPrice;
+    public GenericProduct() {
+
     }
 
-    public GenericProduct(String supplier, String productName, double supplingPrice, LocalDate availableDate) {
+    public double getSupplyingPrice() {
+        return supplyingPrice;
+    }
+
+    public GenericProduct(String supplier, String productName, double supplyingPrice, LocalDate availableDate) {
         this.supplier = supplier;
         this.productName = productName;
-        this.supplingPrice = supplingPrice;
+        this.supplyingPrice = supplyingPrice;
         this.availableDate = availableDate;
     }
 
     public GenericProduct(String supplier, String productName, double price) {
         this.supplier = supplier;
         this.productName = productName;
-        this.supplingPrice = price;
+        this.supplyingPrice = price;
     }
 
     @Override
@@ -33,13 +37,14 @@ public class GenericProduct implements Product{
                 ' ';
     }
 
+
     public String getProductName() {
         return this.productName;
     }
 
     @Override
     public double getPrice() {
-        return this.supplingPrice;
+        return this.supplyingPrice;
     }
 
     @Override

@@ -3,6 +3,7 @@ package oop.advanced.HwShopBasket;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainShop {
     public static Map<GenericProduct,Integer> list1 = new LinkedHashMap<>();
@@ -12,15 +13,13 @@ public class MainShop {
         /**
          * Write a method that returns the average of a list of integers using streams
          */
-        List<Integer> integerList = new ArrayList<>();
+/*        List<Integer> integerList = new ArrayList<>();
         integerList = Arrays.asList(1,2,3,4,5,6,9);
         System.out.println(integerList.stream()
                         .mapToInt(value -> value)
                         .average()
                         .getAsDouble()
-        );
-
-
+        );*/
         /**/
         GenericProduct product1 = new GenericProduct("Supplier1", "Lapte", 3.8, LocalDate.of(2021, Month.FEBRUARY, 28));
         GenericProduct product2 = new GenericProduct("Supplier1", "Miere", 30.0, LocalDate.of(2021, Month.APRIL, 28));
@@ -36,18 +35,16 @@ public class MainShop {
         basket.addProduct(product4,4);
         basket.addProduct(product4,4);
 
-        basket.removeProduct(product1,3);
-        basket.removeProduct(product5,10);
+
+        //basket.removeProduct(product1,3);
+        //basket.removeProduct(product5,10);
 
         System.out.println(basket);
 
         /**/
-
         //addProductsInList();
         //basket.addListToBasket(list1);
         //basket.removeProduct(product1);
-
-
     }
 
     private static void addProductsInList() {
