@@ -1,6 +1,7 @@
-package oop.advanced.HwShopBasket;
+package oop.advanced.homeWorkShopBasket;
 
 public interface Product {
     double getPrice();
+
     boolean getAvailability();
 }

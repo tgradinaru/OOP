@@ -1,8 +1,8 @@
-package oop.advanced.HwShopBasket;
+package oop.advanced.homeWorkShopBasket;
 
 import java.time.LocalDate;
 
-public class GenericProduct implements Product{
+public class GenericProduct implements Product {
     private String supplier;
     private String productName;
     private double supplyingPrice;
@@ -23,20 +23,19 @@ public class GenericProduct implements Product{
         this.availableDate = availableDate;
     }
 
-    public GenericProduct(String supplier, String productName, double price) {
-        this.supplier = supplier;
+    public GenericProduct(String productName, double supplyingPrice, LocalDate availableDate) {
         this.productName = productName;
-        this.supplyingPrice = price;
+        this.supplyingPrice = supplyingPrice;
+        this.availableDate = availableDate;
     }
 
     @Override
     public String toString() {
         return " " +
-                "<<" + productName + ">> " +
+                "[" + productName + "]" +
                 //", availableDate=" + availableDate +
                 ' ';
     }
-
 
     public String getProductName() {
         return this.productName;
