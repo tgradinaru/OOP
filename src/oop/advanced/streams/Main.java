@@ -1,5 +1,6 @@
 package oop.advanced.streams;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -33,5 +34,20 @@ public class Main {
 
         System.out.println("************************");
         names.stream().forEach(element-> System.out.println(element));
+
+        /**
+         * Write a method that returns the average of a list of integers using streams
+         */
+         //integerList = new ArrayList<>();
+        List<Integer> integerList = Arrays.asList(1,2,3,4);
+        System.out.println(integerList.stream()
+                        .mapToInt(value -> value)
+                        .average()
+                        .getAsDouble()
+        );
+
+
+
+
     }
 }
